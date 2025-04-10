@@ -1,0 +1,16 @@
+def soma_de_dois_numeros(numeros, numeroAlvo):
+    mapa = {}  # Dicionário para armazenar número e índice
+
+    for indice, numero in enumerate(numeros):
+        complemento = numeroAlvo - numero
+
+        if complemento in mapa:
+            return [mapa[complemento], indice]  # Retorna os índices dos dois números
+
+        mapa[numero] = indice  # Aqui, o número e seu índice serão armazenados
+
+print(soma_dois_numeros([2, 7, 11, 15], 9))    # Nesse caso, a saída deverá ser: [0, 1]
+print(soma_dois_numeros([3, 2, 4], 6))         # Aqui, a saída vai ser: [1, 2]
+print(soma_dois_numeros([3, 3], 6))            # Como último exemplo, a saída neste caso será: [0, 1]
+
+# Problema pego no site LeetCode, com um nível considerado como fácil.
