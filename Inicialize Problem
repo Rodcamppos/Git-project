@@ -1,0 +1,4 @@
+def generate(numRows):
+    triangle = [] #esta é uma lista para armazenar as linhas do Triângulo de Pascal
+
+   
