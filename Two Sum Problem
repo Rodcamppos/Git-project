@@ -1,3 +1,7 @@
 def soma_de_dois_numeros(numeros, numeroAlvo):
-    mapa = {}  # Dicionário para armazenar número e índice
+    mapa = {}
     for indice, numero in enumerate(numeros):
+        complemento = numeroAlvo - numero
+        if complemento in mapa:
+            return [mapa[complemento], indice]
+        mapa[numero] = indice
